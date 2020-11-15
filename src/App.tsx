@@ -1,5 +1,5 @@
 import React from 'react';
-import BusinessCard from './views/BusinessCard/BusinessCard';
+import BusinessCard from 'views/BusinessCard/BusinessCard';
 
 function App() {
   return <BusinessCard />;
