@@ -6,10 +6,8 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: calc(50% - 2px);
   height: 100%;
-  border-right: 1px solid black;
-  border-left: 1px solid black;
 `;
 
 export const AvatarImg = styled.img`
@@ -39,7 +37,7 @@ export const IconWrapper = styled.div`
 
 export const AvatarWrapper = styled(Wrapper)`
   padding: 1rem;
-  border: 1px solid black;
+  border: 1px solid var(--theme-black);
   height: 300px;
   width: 300px;
   border-radius: 50%;

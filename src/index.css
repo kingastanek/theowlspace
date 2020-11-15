@@ -8,5 +8,7 @@ body {
 }
 
 :root {
-  --theme-grey-: #808080;
+  --theme-black: #000;
+  --theme-white: #fff;
+  --theme-grey: #808080;
 }
