@@ -1,8 +1,13 @@
 import React from 'react';
-import BusinessCard from 'views/BusinessCard/BusinessCard';
+import { BusinessCard, Timeline } from 'views';
 
 function App() {
-  return <BusinessCard />;
+  return (
+    <>
+      <BusinessCard />
+      <Timeline />
+    </>
+  );
 }
 
 export default App;
