@@ -12,7 +12,7 @@ export const Paragraph = styled.p`
 
 export const HorizontalLine = styled.div<tHorizontalLine>`
   background-color: var(--theme-grey);
-  width: 2px;
+  width: 1px;
   min-height: 10px;
   height: ${({height}) => height}
 `;

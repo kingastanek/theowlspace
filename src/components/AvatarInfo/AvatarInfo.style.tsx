@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: calc(50% - 2px);
+  width: 50%;
   height: 100%;
 `;
 
@@ -21,6 +21,7 @@ export const NameText = styled(Paragraph)`
   text-transform: uppercase;
   font-size: 1.25rem;
   margin-top: 2rem;
+  color: var(--theme-black);
 `;
 
 export const ContactText = styled(Paragraph)`
