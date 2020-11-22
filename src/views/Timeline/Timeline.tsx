@@ -1,12 +1,16 @@
 import React from 'react';
+import { TechnologyDescription } from 'components';
 import { HorizontalLine } from 'styles/GlobalStyledComponents';
-import { Wrapper } from './Timeline.style';
+import { HorizontalLineWrapper } from './Timeline.style';
 
-const Timeline = (): JSX.Element => {
+const Timeline: React.FC = (): JSX.Element => {
   return (
-    <Wrapper>
-      <HorizontalLine height='100vh' />
-    </Wrapper>
+    <>
+      <HorizontalLineWrapper>
+        <HorizontalLine height='100vh' />
+      </HorizontalLineWrapper>
+      <TechnologyDescription />
+    </>
   );
 };
 

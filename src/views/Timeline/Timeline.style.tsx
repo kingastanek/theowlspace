@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+export const HorizontalLineWrapper = styled.div`
+  position: absolute;
+  right: 50%;
   height: 100vh;
 `;
