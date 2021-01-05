@@ -1,11 +1,12 @@
 import React from 'react';
-import { BusinessCard, Timeline } from 'views';
+import { Slider } from 'components';
+import { BusinessCard } from 'views';
 
 function App() {
   return (
     <>
       <BusinessCard />
-      <Timeline />
+      <Slider />
     </>
   );
 }
