@@ -18,7 +18,7 @@ type tSlideContent = {
 
 export const Wrapper = styled.div`
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   background: #4b4b4b;
   color: #fff;
   font-weight: 900;
@@ -26,18 +26,18 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 200px 0;
+  position: relative;
 `;
 
 export const Slides = styled.div`
-  display: grid;
+  display: flex;
 `;
 
 export const SlideBackground = styled.div<tSlideBackground>`
-  position: fixed;
+  position: absolute;
   top: 0;
-  left: -10%;
-  right: -10%;
+  left: 0;
+  right: 0;
   bottom: 0;
   background-size: cover;
   background-position: center center;
@@ -52,29 +52,32 @@ export const SlideBackground = styled.div<tSlideBackground>`
 
 export const ButtonWrapper = styled.div`
   display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
 `;
 
 export const Slide = styled.div<tActive>`
-  grid-area: 1 / -1;
   ${({ active }) =>
     active &&
     css`
       z-index: 2;
       pointer-events: auto;
-    `}
+    `};
 `;
 
 export const SlideContent = styled.div<tSlideContent>`
   background-image: ${({ backgroundImage }) => `url('${backgroundImage}')`};
   width: 20vw;
-  height: 30vw;
+  height: 300px;
+  top: 35%;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  transition: transform 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
   opacity: 0.7;
   display: grid;
   align-content: center;
+  position: absolute;
   transform-style: preserve-3d;
   offset: ${({ offset }) => `${offset}`};
   transform: ${({
