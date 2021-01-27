@@ -21,13 +21,14 @@ export const NameText = styled(Paragraph)`
   text-transform: uppercase;
   font-size: 1.25rem;
   margin-top: 2rem;
-  color: var(--theme-black);
+  color: var(--theme-white);
 `;
 
 export const ContactText = styled(Paragraph)`
   font-size: 1rem;
   display: flex;
   justify-content: center;
+  color: var(--theme-white);
 `;
 
 export const IconWrapper = styled.div`

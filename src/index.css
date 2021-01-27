@@ -14,4 +14,5 @@ body {
   --theme-black: #000;
   --theme-white: #fff;
   --theme-grey: #292828;
+  --theme-almost-white: rgb(235, 235, 235);
 }

@@ -16,7 +16,7 @@ type tVerticalLine = {
 }
 
 export const Paragraph = styled.p`
-  color: var(--theme-grey);
+  color: var(--theme-almost-white);
   margin: 0;
   padding: 0;
 `;
