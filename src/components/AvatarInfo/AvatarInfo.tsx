@@ -35,13 +35,13 @@ const AvatarInfo: React.FC<iAvatarInfo> = ({
       <NameText>{name}</NameText>
 
       <IconWrapper>
-        <Icon icon='email' />
+        <Icon icon='email' fill='#fff' />
       </IconWrapper>
 
       <ContactText>{email}</ContactText>
 
       <IconWrapper>
-        <Icon icon='linkedin' />
+        <Icon icon='linkedin' fill='#fff' />
       </IconWrapper>
 
       <ContactText>{linkedin}</ContactText>

@@ -1,12 +1,13 @@
 import React from 'react';
-import { Slider } from 'components';
+import { Slider, NavBar } from 'components';
 import { BusinessCard } from 'views';
 
 function App() {
   return (
     <>
-      <BusinessCard />
-      <Slider />
+      <NavBar />
+      <BusinessCard id='home' />
+      <Slider id='technology' />
     </>
   );
 }

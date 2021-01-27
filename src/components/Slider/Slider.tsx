@@ -12,7 +12,7 @@ import {
   ButtonWrapper,
 } from './Slider.style';
 
-const Slider: React.FC = (): JSX.Element => {
+const Slider = ({ id }): JSX.Element => {
   const [slideIndex, setSlideIndex] = useState<number>(2);
   const [positionNumber, setPositionNumber] = useState<number>(0.5);
 
@@ -140,7 +140,7 @@ const Slider: React.FC = (): JSX.Element => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper id={id}>
       <Slides>
         {slides.map((slide, i) => {
           const offset = slideIndex - i;

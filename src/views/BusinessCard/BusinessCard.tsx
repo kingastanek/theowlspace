@@ -5,7 +5,7 @@ import kingaPhoto from 'assets/photos/kinga.png';
 import { Paragraph, HorizontalLine } from 'styles/GlobalStyledComponents';
 import { Wrapper, TextWrapper } from './BusinessCard.style';
 
-const BusinessCard = (): JSX.Element => {
+const BusinessCard = ({ id }): JSX.Element => {
   const [przemekSection, setPrzemekSection] = useState<boolean>(true);
   const [kingaSection, setKingaSection] = useState<boolean>(true);
 
@@ -20,7 +20,7 @@ const BusinessCard = (): JSX.Element => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper id={id}>
       {przemekSection ? (
         <>
           <AvatarInfo
