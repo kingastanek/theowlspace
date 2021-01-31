@@ -1,6 +1,6 @@
 import React from 'react';
-import { Slider, NavBar } from 'components';
-import { BusinessCard } from 'views';
+import { NavBar } from 'components';
+import { BusinessCard, Slider } from 'views';
 
 function App() {
   return (

@@ -5,7 +5,11 @@ import kingaPhoto from 'assets/photos/kinga.png';
 import { Paragraph, HorizontalLine } from 'styles/GlobalStyledComponents';
 import { Wrapper, TextWrapper } from './BusinessCard.style';
 
-const BusinessCard = ({ id }): JSX.Element => {
+interface iBusinessCard {
+  id: string;
+}
+
+const BusinessCard: React.FC<iBusinessCard> = ({ id }): JSX.Element => {
   const [przemekSection, setPrzemekSection] = useState<boolean>(true);
   const [kingaSection, setKingaSection] = useState<boolean>(true);
 

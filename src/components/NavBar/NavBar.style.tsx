@@ -10,12 +10,13 @@ export const Nav = styled.nav`
 `;
 
 export const NavLinks = styled(Link)`
-  color: rgb(235, 235, 235);
+  color: var(--theme-almost-white);
   text-decoration: none;
   margin-right: 48px;
   box-sizing: border-box;
+  cursor: pointer;
   &.active {
-    border-bottom: 1px solid rgb(235, 235, 235);
+    border-bottom: 1px solid var(--theme-almost-white);
     padding-bottom: 12px;
   }
 `;

@@ -15,7 +15,7 @@ interface iAvatarInfo {
   email: string;
   linkedin: string;
   onMouseEnter: () => void;
-  onMouseLeave?: () => void;
+  onMouseLeave: () => void;
 }
 
 const AvatarInfo: React.FC<iAvatarInfo> = ({
@@ -24,7 +24,7 @@ const AvatarInfo: React.FC<iAvatarInfo> = ({
   email,
   linkedin,
   onMouseEnter,
-  onMouseLeave = () => {},
+  onMouseLeave,
 }): JSX.Element => {
   return (
     <Wrapper onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
@@ -35,13 +35,13 @@ const AvatarInfo: React.FC<iAvatarInfo> = ({
       <NameText>{name}</NameText>
 
       <IconWrapper>
-        <Icon icon='email' fill='#fff' />
+        <Icon icon='email' />
       </IconWrapper>
 
       <ContactText>{email}</ContactText>
 
       <IconWrapper>
-        <Icon icon='linkedin' fill='#fff' />
+        <Icon icon='linkedin' />
       </IconWrapper>
 
       <ContactText>{linkedin}</ContactText>

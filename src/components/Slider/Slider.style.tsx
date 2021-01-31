@@ -1,5 +1,9 @@
 import styled, { css } from 'styled-components';
 
+type tWrapper = {
+  backgroundColor: string;
+};
+
 type tSlideBackground = {
   backgroundImage: string;
   active: boolean | null;
@@ -16,11 +20,11 @@ type tSlideContent = {
   dir: any;
 };
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<tWrapper>`
   width: 100%;
   min-height: 100vh;
-  background: #4b4b4b;
-  color: #fff;
+  background-color: ${({ backgroundColor }) => backgroundColor};
+  color: var(--theme-white);
   font-weight: 900;
   overflow: hidden;
   display: flex;
@@ -39,7 +43,8 @@ export const SlideBackground = styled.div<tSlideBackground>`
   left: 0;
   right: 0;
   bottom: 0;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center center;
   z-index: -1;
   opacity: ${({ active }) => (active ? 0.2 : 0)};
@@ -62,6 +67,7 @@ export const Slide = styled.div<tActive>`
     css`
       z-index: 2;
       pointer-events: auto;
+      border: 1px solid var(--theme-black); ;
     `};
 `;
 
@@ -69,8 +75,8 @@ export const SlideContent = styled.div<tSlideContent>`
   background-image: ${({ backgroundImage }) => `url('${backgroundImage}')`};
   width: 20vw;
   height: 300px;
-  top: 35%;
-  background-size: cover;
+  top: 30%;
+  background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
   transition: all 1s ease-in-out;
@@ -105,7 +111,7 @@ export const Button = styled.button`
   cursor: pointer;
   background: transparent;
   border: none;
-  color: white;
+  color: var(--theme-white);
   font-size: 5rem;
   width: 5rem;
   height: 5rem;
@@ -134,7 +140,7 @@ export const SlideContentInner = styled.div<tActive>`
   transform-style: preserve-3d;
   transform: translateZ(2rem);
   transition: opacity 0.3s linear;
-  text-shadow: 0 0.1rem 1rem #000;
+  text-shadow: 0 0.1rem 1rem var(--theme-black);
   opacity: ${({ active }) => (active ? 1 : 0)};
 `;
 
