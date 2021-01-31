@@ -1,24 +1,12 @@
 import React from 'react';
 import { Nav, NavLinks } from './NavBar.style';
 
-const NavBar = () => {
+const NavBar: React.FC = (): JSX.Element => {
   const navBarElements = [
-    {
-      name: 'Home',
-      linkTo: 'home',
-    },
-    {
-      name: 'Technology',
-      linkTo: 'technology',
-    },
-    {
-      name: 'Coffee time',
-      linkTo: 'coffee',
-    },
-    {
-      name: 'Contact',
-      linkTo: 'contact',
-    },
+    { name: 'Home', linkTo: 'home' },
+    { name: 'Technology', linkTo: 'technology' },
+    { name: 'Coffee time', linkTo: 'coffee' },
+    { name: 'Contact', linkTo: 'contact' },
   ];
 
   return (
