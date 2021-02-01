@@ -27,7 +27,6 @@ interface iSlider {
 
 const Slider: React.FC<iSlider> = ({ slides, id }): JSX.Element => {
   const [slideIndex, setSlideIndex] = useState<number>(2);
-  const [positionNumber, setPositionNumber] = useState<number>(0.5);
 
   const changeSlide = (action) => {
     action === 'PREV'
@@ -45,7 +44,7 @@ const Slider: React.FC<iSlider> = ({ slides, id }): JSX.Element => {
           const active = offset === 0;
 
           // eslint-disable-next-line react-hooks/rules-of-hooks
-          const ref = useTilt(active, positionNumber, setPositionNumber);
+          const ref = useTilt(active);
 
           const dir: number = offset === 0 ? 0 : offset > 0 ? 1 : -1;
           const { image } = slide;

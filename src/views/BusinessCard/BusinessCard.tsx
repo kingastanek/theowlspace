@@ -40,11 +40,10 @@ const BusinessCard: React.FC<iBusinessCard> = ({ id }): JSX.Element => {
       ) : (
         <TextWrapper style={{ textAlign: 'right' }}>
           <Paragraph>
-            <h1>Hello.</h1>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            volutpat quam velit, a sollicitudin ante gravida ultrices. Cras nec
-            ipsum dui. Quisque nec laoreet mauris. Vestibulum sit amet sodales
-            sem, quis tristique ipsum. Nunc orci velit, condimentum eget
+            Hello. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nulla volutpat quam velit, a sollicitudin ante gravida ultrices.
+            Cras nec ipsum dui. Quisque nec laoreet mauris. Vestibulum sit amet
+            sodales sem, quis tristique ipsum. Nunc orci velit, condimentum eget
             lobortis interdum, eleifend sit amet quam. Donec consectetur commodo
             velit, in egestas.
           </Paragraph>
@@ -66,8 +65,7 @@ const BusinessCard: React.FC<iBusinessCard> = ({ id }): JSX.Element => {
       ) : (
         <TextWrapper>
           <Paragraph>
-            <h1>Hi.</h1>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            Hi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
             volutpat quam velit, a sollicitudin ante gravida ultrices. Cras nec
             ipsum dui. Quisque nec laoreet mauris. Vestibulum sit amet sodales
             sem, quis tristique ipsum. Nunc orci velit, condimentum eget

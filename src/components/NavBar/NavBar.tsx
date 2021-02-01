@@ -14,7 +14,7 @@ const NavBar: React.FC = (): JSX.Element => {
       {navBarElements.map((element) => {
         const { name, linkTo } = element;
         return (
-          <NavLinks to={linkTo} spy smooth duration={400}>
+          <NavLinks key={name} to={linkTo} spy smooth duration={400}>
             {name}
           </NavLinks>
         );
