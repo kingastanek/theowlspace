@@ -26,8 +26,6 @@ export const getSlideStyle = (index: number, slides: tSlides[], slideIndex: numb
   const getIndicator = (number: number) =>
     (slideIndex + number) % slides.length;
 
-  console.log('slideIndex', slideIndex);
-
   switch (index) {
     case getIndicator(3):
       return first;
@@ -42,11 +40,7 @@ export const getSlideStyle = (index: number, slides: tSlides[], slideIndex: numb
   }
 };
 
-export const useTilt = (
-  active: boolean,
-  positionNumber: number,
-  setPositionNumber: (number: number) => void
-) => {
+export const useTilt = (active: boolean) => {
   const ref = useRef<any>(null);
 
   useEffect(() => {
@@ -55,35 +49,38 @@ export const useTilt = (
     }
 
     const state = {
-      rect:
-        ref && ref.current ? ref.current!.getBoundingClientRect() : undefined,
+      rect: {
+        left: undefined,
+        width: undefined,
+        height: undefined,
+        top: undefined
+      },
       mouseX: undefined,
       mouseY: undefined,
     };
+    let el = ref.current;
 
-    const handleMouseMove = (event) => {
-      if (!ref.current) return;
-      if (!state.rect) {
-        state.rect = ref.current.getBoundingClientRect();
+    const handleMouseMove = (e) => {
+      if (!el) {
+        return;
       }
+      if (!state.rect.left) {
+        state.rect = el.getBoundingClientRect();
+      }
+      
+      state.mouseX = e.clientX;
+      state.mouseY = e.clientY;
+      const px = (state.mouseX! - state.rect.left!) / state.rect.width!;
+      const py = (state.mouseY! - state.rect.top!) / state.rect.height!;
 
-      state.mouseX = event.clientX;
-      state.mouseY = event.clientY;
-      const px =
-        (state.mouseX! - state.rect.left) / state.rect.width - positionNumber;
-      const py = (state.mouseY! - state.rect.top) / state.rect.height - 0.5;
-
-      ref.current.style.setProperty('--px', px);
-      ref.current.style.setProperty('--py', py);
+      el.style.setProperty("--px", px);
+      el.style.setProperty("--py", py);
     };
 
-    setPositionNumber(2);
-
-    ref.current.addEventListener('mousemove', handleMouseMove);
+    el.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      ref.current &&
-        ref.current.removeEventListener('mousemove', handleMouseMove);
+      el.removeEventListener("mousemove", handleMouseMove);
     };
   }, [active]);
 

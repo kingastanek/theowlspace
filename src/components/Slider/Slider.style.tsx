@@ -95,13 +95,15 @@ export const SlideContent = styled.div<tSlideContent>`
   ${({ active }) =>
     active &&
     css`
+      --x: calc(var(--px) - 0.5);
+      --y: calc(var(--py) - 0.5);
       opacity: 1;
       transform: perspective(1000px);
 
       &:hover {
         transition: none;
-        transform: perspective(1000px) rotateY(calc(var(--px) * 45deg))
-          rotateX(calc(var(--py) * -45deg));
+        transform: perspective(1000px) rotateY(calc(var(--x) * 45deg))
+          rotateX(calc(var(--y) * -45deg));
       }
     `}
 `;
