@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavBar } from 'components';
+import { NavBar, Footer } from 'components';
 import { BusinessCard, Slider } from 'views';
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
       <NavBar />
       <BusinessCard id='home' />
       <Slider id='technology' />
+      <Footer />
     </>
   );
 }
